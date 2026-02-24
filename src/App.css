@@ -1,12 +1,26 @@
 body {
   font-family: 'Josefin Sans';
   background-color: #FFFAFB;
+  /* background-image: url('./assets/images/banner.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 700px 900px; */
 }
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  width: 758px;
+  height: 1007px;
+  margin-top: -330px;
 
 }
 
@@ -45,22 +59,12 @@ body {
 .react-horizontal-scrolling-menu--wrapper {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .detail-image {
   width: 729px;
   height: 742px;
-}
-
-.hero-banner-img {
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  width: 700px;
-  height: 900px;
-  margin-top: -330px;
-
 }
 
 .exercise-card {
@@ -78,8 +82,9 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.exercise-card img {
+.exercise-card-img {
   height: 326px;
+  width: 200px;
 }
 
 .bodyPart-card {
@@ -97,12 +102,22 @@ body {
   border: 1px solid #FF2625 !important;
 }
 
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+
+}
+
 .exercise-video {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 387px;
-  height: 381px;
+  height: 250px;
   text-decoration: none;
 }
 
@@ -122,10 +137,6 @@ body {
     position: static !important;
   }
 
-  .hero-banner-img {
-    display: none;
-  }
-
   .exercise-card {
     width: 320px;
   }
@@ -135,10 +146,18 @@ body {
     height: 300px;
   }
 
+  body {
+    background-image: none;
+  }
 }
 
 @media screen and (max-width:400px) {
   .exercise-card {
     width: 280px;
   }
+
+  body {
+    background-image: none;
+  }
+
 }

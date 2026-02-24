@@ -7,8 +7,8 @@ import ExerciseCard from './ExerciseCard'
 import Loader from './Loader'
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [exercisesPerPage] = useState(6);
+  const [currentPage, setCurrentPage] = useState(1)
+  const [exercisesPerPage] = useState(6)
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -30,7 +30,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     fetchExercisesData()
   }, [bodyPart, setExercises])
 
-  // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = Array.isArray(exercises) ? exercises.slice(indexOfFirstExercise, indexOfLastExercise) : []
@@ -49,7 +48,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         {currentExercises.map((exercise, idx) => (
           <ExerciseCard key={idx} exercise={exercise} />
         ))}
-      </Stack>
+      </Stack> 
       <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
         {exercises.length > 9 && (
           <Pagination

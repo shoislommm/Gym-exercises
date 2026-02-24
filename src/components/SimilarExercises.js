@@ -16,7 +16,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
         textTransform: 'capitalize'
       }}>Target Muscle</span> exercises
     </Typography>
-    <Stack direction="row" sx={{ p: 2, position: 'relative' }}>
+    <Stack direction="row" sx={{ p: 2, position: 'static' }}>
       {targetMuscleExercises.length !== 0 ? <HorizontalScrollbar data={targetMuscleExercises} /> : <Loader />}
     </Stack>
     <Typography
